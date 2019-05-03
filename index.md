@@ -7,6 +7,8 @@ Things to do and see:
  * Visit the local BBQ where traditional food is served.
  * Brewery tours
  * Bad Film Night
+ * Course:   Stair noise awareness with Emily
+ * Roast
  
 
 Engineering Department:
