@@ -1,8 +1,3 @@
----
-name: Welcome to 104
-description: Testytest
----
-
 
 Here is the code that makes all things in 104 function!
 
