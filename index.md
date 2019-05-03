@@ -1,6 +1,7 @@
-Welcome to 104
-==============
-
+---
+name: Welcome to 104
+description: Testytest
+---
 
 
 Here is the code that makes all things in 104 function!
@@ -8,6 +9,6 @@ Here is the code that makes all things in 104 function!
 
 See:
 
- * https://github.com/Hello1024/104-LED-Lighting
- * https://github.com/Hello1024/whatsapp-doorbell
+ * [Arduino code for all LED strips](https://github.com/Hello1024/104-LED-Lighting)
+ * [Simon the doorbell](https://github.com/Hello1024/whatsapp-doorbell)
  
