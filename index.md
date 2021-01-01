@@ -9,6 +9,7 @@ Things to do and see:
  * Bad Film Night
  * Course:   Stair noise awareness with Emily
  * Roast
+ * [Control the Heating](https://hello1024.github.io/104-Home/Fordhook.html)
  
 
 Engineering Department:
