@@ -21,7 +21,7 @@ Engineering Department:
   * Ada Lovelace Brewery
  
  Department of Legislation:
-  * [Girl's Night Code of Conduct](https://github.com/Hello1024/Girls_Night.jpg) 
+  * [Girl's Night Code of Conduct](Girls_Night.jpg) 
   
  
  
