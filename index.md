@@ -17,8 +17,11 @@ Engineering Department:
  * [Arduino code for all LED strips](https://github.com/Hello1024/104-LED-Lighting)
  * [Simon the doorbell](https://github.com/Hello1024/whatsapp-doorbell)
  
- Imports and Exports
+ Imports and Exports:
   * Ada Lovelace Brewery
+ 
+ Department of Legislation:
+  * Girl's Night Code of Conduct(https://github.com/Hello1024/Girls_Night.jpg) 
   
  
  
