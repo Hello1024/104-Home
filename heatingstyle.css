@@ -1,5 +1,5 @@
-html{margin:0;height:100%;overflow:hidden;}
-body{margin:0;height:100%;overflow:auto;}
+html{margin:0;height:100%;overflow:hidden;position:fixed;}
+body{margin:0;height:100%;overflow:auto;position:fixed;}
 canvas{
     position:absolute;top:0;left:0
     background-image: linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
