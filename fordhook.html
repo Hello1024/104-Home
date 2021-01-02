@@ -20,10 +20,18 @@
 			<button class="colder centered">More Cold</button>
 		</div>
 		
+		<div class="lds-dual-ring loader"></div>
+		
 		<script src=heatingmovement.js></script>
 		<script>
+			async myfetch(url) {
+				document.querySelector('.loader').style.display = 'none';
+				a = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/' + url + '?'+Date.now());
+				document.querySelector('.loader').style.display = 'block';
+				return a;
+			}
 			async function updateTemp() {
-			  var res = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/temp?'+Date.now());
+			  var res = await myfetch('temp');
                           var json = await res.json();
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
@@ -37,12 +45,12 @@
 			updateTemp();
 			
 			async function hotter() {
-				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/hotter?'+Date.now());
+				await myfetch('hotter');
 				updateTemp();
 			}
 			
 			async function colder() {
-				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/colder?'+Date.now());
+				await myfetch('colder');
 				updateTemp();
 			}
 			document.querySelector("button.colder").addEventListener('click', colder);
