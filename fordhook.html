@@ -23,7 +23,7 @@
 		<script>
 			async function updateTemp() {
 			  var res = await fetch('https://cors-anywhere.herokuapp.com/http://104.omattos.com:19891/temp');
-                          var json = await response.json();
+                          var json = await res.json();
 			  document.querySelector(".now").innerText = json.hallTemperature;
 			  document.querySelector(".target").innerText = json.targetHallTemperature;
 			}
