@@ -24,7 +24,7 @@
 		
 		<script src=heatingmovement.js></script>
 		<script>
-			async myfetch(url) {
+			async function myfetch(url) {
 				document.querySelector('.loader').style.display = 'none';
 				a = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/' + url + '?'+Date.now());
 				document.querySelector('.loader').style.display = 'block';
