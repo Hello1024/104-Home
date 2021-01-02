@@ -12,7 +12,7 @@
 		"src":"hot_cold_512.png",
 		"type":"image/png",
 		"sizes":"512x512"
-	},
+	}
 ],
 "start_url": "/104-Home/fordhook.html",
 "display": "standalone",
