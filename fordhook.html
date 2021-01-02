@@ -15,7 +15,7 @@
 		<div id=infront>
 			<button class="hotter centered">Hotter Plz</button>
 			<h1 class="nownumber"><div id='now'>&#x1F937;</div></h1> 
-			<p class="nextnumber">Going to:<span id='target'>&#x1F937;</span></p>
+			<p class="nextnumber">Going to:<div id='target'>&#x1F937;</div></p>
 			<button class="colder centered">Colder Plz</button>
 		</div>
 		
@@ -26,6 +26,11 @@
                           var json = await res.json();
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
+			  if (json.isHeatingNow)
+			    document.querySelector('canvas').style.backgroundImage = 'linear-gradient(bottom, rgb(212,173,105) 0%, rgb(145,82,23) 84%);';
+			  else
+			    document.querySelector('canvas').style.backgroundImage = 'linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);';
+			  
 			}
 			
 			updateTemp();
