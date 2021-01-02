@@ -22,7 +22,7 @@
 		<script src=heatingmovement.js></script>
 		<script>
 			async function updateTemp() {
-			  var res = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/temp');
+			  var res = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/temp?');
                           var json = await res.json();
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
@@ -36,12 +36,12 @@
 			updateTemp();
 			
 			async function hotter() {
-				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/hotter');
+				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/hotter?');
 				updateTemp();
 			}
 			
 			async function colder() {
-				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/colder');
+				await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/colder?');
 				updateTemp();
 			}
 			document.querySelector("button.colder").addEventListener('click', colder);
