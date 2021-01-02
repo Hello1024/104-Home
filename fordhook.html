@@ -36,12 +36,12 @@
 			updateTemp();
 			
 			async function hotter() {
-				await fetch('https://cors-anywhere.herokuapp.com/http://104.omattos.com:19891/hotter');
+				await fetch('https://crossorigin.me/http://104.omattos.com:19891/hotter');
 				updateTemp();
 			}
 			
 			async function colder() {
-				await fetch('https://cors-anywhere.herokuapp.com/http://104.omattos.com:19891/colder');
+				await fetch('https://crossorigin.me/http://104.omattos.com:19891/colder');
 				updateTemp();
 			}
 			document.querySelector("button.colder").addEventListener('click', colder);
