@@ -41,7 +41,12 @@ button {
 	display: block;
 	max-width: 300px;
 	width: 100%;
-	height:8%;	
+	height:6%;
+	font-family: 'Henny Penny', cursive;
+	font-size:8vh;
+	vertical-align:middle;
+	text-align: center;
+	color: black;
 }
 .hotter {
 	font-family: 'Nosifer', cursive;
@@ -56,7 +61,7 @@ button {
 }
 h1{
 	font-family: 'Henny Penny', cursive;
-	font-size:14vh;
+	font-size:18vh;
 	vertical-align:middle;
 	text-align: center;
 	color: black;
