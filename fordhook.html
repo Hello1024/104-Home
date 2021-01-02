@@ -14,10 +14,32 @@
 		
 		<div id=infront>
 			<button class="hotter centered">Hotter Plz</button>
-			<h1 class="centered">25</h1>
+			<h1 class="centered"><div id='now'>&#F937</div> going to:<div id='target'>&#F937</div></h1>
 			<button class="colder centered">Colder Plz</button>
 		</div>
 		
 		<script src=heatingmovement.js></script>
+		<script>
+			async function updateTemp() {
+			  var res = await fetch('http://104.omattos.com:19891/temp');
+                          var json = await response.json();
+			  document.querySelector(".now").innerText = json.hallTemperature;
+			  document.querySelector(".target").innerText = json.targetHallTemperature;
+			}
+			
+			updateTemp();
+			
+			async function hotter() {
+				await fetch('http://104.omattos.com:19891/hotter');
+				updateTemp();
+			}
+			
+			async function colder() {
+				await fetch('http://104.omattos.com:19891/colder');
+				updateTemp();
+			}
+			document.querySelector("button .colder").addEventListener('click', colder);
+			document.querySelector("button .hotter").addEventListener('click', hotter);
+		</script>
 	</body>
 </html>
