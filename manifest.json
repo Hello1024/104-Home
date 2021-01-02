@@ -1,0 +1,19 @@
+"short_name": "Hot? Cold?"
+"name": "Too Hot? Too Cold? Confused?",
+"description": "Is your life out of control? Well at least the temperature of your room isn't! Solving a crisis one degree at a time.",
+"icons": [
+	{
+		"src":"hot_cold_192.png",
+		"type":"image/png",
+		"sizes":"192x192"
+	},
+		"src":"hot_cold_512.png",
+		"type":"image/png",
+		"sizes":"512x512"
+	},
+]
+"start_url": "/104-Home/fordhook.html"
+"display": "standalone",
+"scope": "/104-Home/"
+"background_color": "#3367D6",
+"theme_color": "#3367D6",
