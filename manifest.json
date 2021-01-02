@@ -1,3 +1,4 @@
+{
 "short_name": "Hot? Cold?",
 "name": "Too Hot? Too Cold? Confused?",
 "description": "Is your life out of control? Well at least the temperature of your room isn't! Solving a crisis one degree at a time.",
@@ -17,3 +18,4 @@
 "scope": "/104-Home/",
 "background_color": "#3367D6",
 "theme_color": "#3367D6",
+}
