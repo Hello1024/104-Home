@@ -33,6 +33,7 @@
 			async function updateTemp() {
 			  var res = await myfetch('temp');
                           var json = await res.json();
+			  if ('hallTemperature' not in json) throw "Error!  Bad response from server"
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
 			  if (json.isHeatingNow)
@@ -55,6 +56,11 @@
 			}
 			document.querySelector("button.colder").addEventListener('click', colder);
 			document.querySelector("button.hotter").addEventListener('click', hotter);
+			
+			window.addEventListener('error', function(event) {
+				alert("Something went wrong.  Switch back to the old heating system by going to the boiler cupboard, disconnecting the white wire marked 'boiler' and plugging into the black wire marked 'boiler' without capitals");
+				console.log(event);
+			});
 		</script>
 	</body>
 </html>
