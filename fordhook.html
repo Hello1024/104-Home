@@ -57,10 +57,14 @@
 			document.querySelector("button.colder").addEventListener('click', colder);
 			document.querySelector("button.hotter").addEventListener('click', hotter);
 			
-			window.addEventListener('error', function(event) {
+			
+			var errfunc = function(event) {
 				alert("Something went wrong.  Switch back to the old heating system by going to the boiler cupboard, unplugging the white wire marked 'boiler' and plugging into the black wire marked 'boiler' without capitals.  Then, to be hotter, make sure both red lights are on by pressing buttons on the white box on the wall inside the boiler room.");
 				console.log(event);
-			});
+			};
+			
+			window.addEventListener('error', errfunc);
+			window.addEventListener("unhandledrejection", errfunc);
 		</script>
 	</body>
 </html>
