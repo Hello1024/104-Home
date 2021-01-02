@@ -29,6 +29,20 @@ button {
 	width: 100%;
 	height:33%;
 }
+.nownumber {
+	margin:0 auto;
+	display: block;
+	max-width: 300px;
+	width: 100%;
+	height:25%;
+}
+.nextnumber {
+	margin:0 auto;
+	display: block;
+	max-width: 300px;
+	width: 100%;
+	height:8%;	
+}
 .hotter {
 	font-family: 'Nosifer', cursive;
 	background-color: red;
