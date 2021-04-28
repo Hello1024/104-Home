@@ -45,8 +45,7 @@
 			    document.querySelector('canvas').style.backgroundImage = 'linear-gradient(180deg, rgb(105,173,212) 0%, rgb(23,82,145) 84%)';
 			  
 			}
-			
-			updateTemp();
+		
 			
 			async function hotter() {
 				await myfetch('hotter');
@@ -68,6 +67,8 @@
 			
 			window.addEventListener('error', errfunc);
 			window.addEventListener("unhandledrejection", errfunc);
+			
+			updateTemp();
 		</script>
 	</body>
 </html>
