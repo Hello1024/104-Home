@@ -26,13 +26,16 @@
 		<script>
 			async function myfetch(url) {
 				document.querySelector('.loader').style.display = 'block';
-				a = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/' + url + '?'+Date.now());
+				let password = localStorage.password;
+				if (!password) password=prompt("Please type the password into the box.  The password is fordhook.  Thats what you need to type or it wont work");
+				let a = await fetch('https://api.allorigins.win/raw?url=http://104.omattos.com:19891/' + url + '?password='+encodeURIComponent(password)+'&'+Date.now());
+				let json = await a.json()
+				localStorage.setItem('password', password)
 				document.querySelector('.loader').style.display = 'none';
-				return a;
+				return json;
 			}
 			async function updateTemp() {
-			  var res = await myfetch('temp');
-                          var json = await res.json();
+			  var json = await myfetch('temp');
 			  if (!('hallTemperature' in json)) throw "Error!  Bad response from server"
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
