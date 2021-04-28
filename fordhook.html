@@ -46,29 +46,30 @@
 			  
 			}
 		
-			
-			async function hotter() {
-				await myfetch('hotter');
-				updateTemp();
-			}
-			
-			async function colder() {
-				await myfetch('colder');
-				updateTemp();
-			}
-			document.querySelector("button.colder").addEventListener('click', colder);
-			document.querySelector("button.hotter").addEventListener('click', hotter);
-			
-			
 			var errfunc = function(event) {
 				alert("Something went wrong.  Switch back to the old heating system by going to the boiler cupboard.  Plug the 'Boiler A' wire into 'Boiler B' and 'Pump A' into 'Pump B'.  Then, to be hotter, make sure both red lights are on by pressing buttons on the white box on the wall inside the boiler room.");
 				console.log(event);
 			};
 			
+			async function hotter() {
+				await myfetch('hotter');
+				updateTemp().catch(errfunc);
+			}
+			
+			async function colder() {
+				await myfetch('colder');
+				updateTemp().catch(errfunc);
+			}
+			document.querySelector("button.colder").addEventListener('click', colder);
+			document.querySelector("button.hotter").addEventListener('click', hotter);
+			
+			
+
+			
 			window.addEventListener('error', errfunc);
 			window.addEventListener("unhandledrejection", errfunc);
 			
-			updateTemp();
+			updateTemp().catch(errfunc);
 		</script>
 	</body>
 </html>
