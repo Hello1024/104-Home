@@ -52,6 +52,10 @@
 			};
 			
 			async function hotter() {
+				if (Math.random()>0.8) {   // TODO:  detect this properly...
+					if (!confirm("Looks like there is some window/door open..  Can you check and close them?")) return;
+				        prompt("How many things were open?");
+				}
 				await myfetch('hotter');
 				updateTemp().catch(errfunc);
 			}
