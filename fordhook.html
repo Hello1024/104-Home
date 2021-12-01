@@ -28,7 +28,7 @@
 				document.querySelector('.loader').style.display = 'block';
 				let password = localStorage.password;
 				if (!password) password=prompt("Please type the password into the box.  The password is fordhook.  Thats what you need to type or it wont work");
-				let a = await fetch('https://thingproxy.freeboard.io/fetch/http://104.omattos.com:19891/' + url + '?password='+encodeURIComponent(password)+'&'+Date.now());
+				let a = await fetch('https://omattos.com/104proxy.php/' + url + '?password='+encodeURIComponent(password)+'&'+Date.now());
 				let json = await a.json()
 				localStorage.setItem('password', password)
 				document.querySelector('.loader').style.display = 'none';
