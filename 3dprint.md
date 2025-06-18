@@ -16,7 +16,7 @@ The 3d printer is easiest to use with "Cura" software.
 ### Setup on your laptop
 [Download it here](https://ultimaker.com/software/ultimaker-cura/)
 
-Once installed, create a local  "ultimaker 2+" and import [this settings file](3dprintsettings.curaprofile].
+Once installed, create a local  "ultimaker 2+" and import [this settings file](3dprintsettings.curaprofile).
 
 
 Go to the 'marketplace' and install the (free) "moonraker" plugin.
@@ -27,9 +27,11 @@ Type "http://192.168.91.69/" into the top box.    On the "upload tab" choose the
 
 ### Use the printer
 
-Click this link:  http://192.168.91.69/
+Click this link:  [http://192.168.91.69/](http://192.168.91.69/)  (must be on the eightlegs wifi)
 
-If it won't load, remove the power USB to the little circuit board, plug it in again, and wait 5 mins.
+If it won't load, remove the power USB to the little circuit board near the printer, plug it in again, and wait a few mins.
+
+Turn on the printer.   Switch is awkwardly on the back, left hand side.
 
 From there you can press "Restart Firmware" if needed to reset everything.
 
@@ -38,6 +40,6 @@ You can use the buttons to "remove filament" and "add filament" to load and unlo
 When you're ready to go, click the print button in Cura and it should go (after a few mins of warming up).
 
 
-If the machine screws up, you can turn it off with the power switch (right on the back, left side), or the emergency stop button at the above link.
+If the machine screws up, you can turn it off with the power switch, or the emergency stop button at the above link.
 
 If something breaks and you can't fix it, ask on the house group and someone will be around to ask.  It is fairly robust and anyway every part can be replaced for not much money, so don't worry about doing the wrong thing.
