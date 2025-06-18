@@ -11,6 +11,7 @@ Things to do and see:
  * Roast
  * [Control the Heating](https://hello1024.github.io/104-Home/fordhook.html) [(App installation instructions)](https://hello1024.github.io/104-Home/appinstall.html)
  * [Control the DUCK LIGHT](https://Francesca4242.github.io/Duck_Light_App/index.html) [(App installation instructions)](https://Francesca4242.github.io/Duck_Light_App/appinstall.html)
+ * [3D print stuff!!](3dprint.md)
  
 
 Engineering Department:
