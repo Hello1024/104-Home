@@ -35,7 +35,7 @@ Turn on the printer.   Switch is awkwardly on the back, left hand side.
 
 From there you can press "Restart Firmware" if needed to reset everything.
 
-You can use the buttons to "remove filament" and "add filament" to load and unload the plastic for whatever color you need.
+You can use the buttons to `UNLOAD_FILAMENT` and `LOAD_FILAMENT` under `Tools` to put the plastic in for whatever color you need.  Warm it up to 210C (extruder temperature) first.
 
 When you're ready to go, click the print button in Cura and it should go (after a few mins of warming up).
 
