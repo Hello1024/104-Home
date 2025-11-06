@@ -7,6 +7,7 @@
 		<link rel="manifest" href="manifest.json">
 		<link href="https://fonts.googleapis.com/css2?family=Akronim&family=Creepster&family=Frijole&family=Henny+Penny&family=Nosifer&display=swap" rel="stylesheet">
 		<link rel="apple-touch-icon" href="icon-512x512.png">
+		<script src="https://cdn.socket.io/4.3.1/socket.io.min.js"></script>
 	</head>
 	<body>
 		<canvas id="canvas" width=150>
@@ -24,6 +25,10 @@
 		
 		<script src=heatingmovement.js></script>
 		<script>
+			var socket = io('https://heating.omattos.com')
+			socket.on('temp', (msg) => {
+			    updateTempResp(msg);
+			});
 			async function myfetch(url) {
 				document.querySelector('.loader').style.display = 'block';
 				let password = localStorage.password;
@@ -36,6 +41,9 @@
 			}
 			async function updateTemp() {
 			  var json = await myfetch('temp');
+			  updateTempResp(json);
+			}
+			function updateTempResp(json) {
 			  if (!('hallTemperature' in json)) throw "Error!  Bad response from server"
 			  document.querySelector("#now").innerText = json.hallTemperature;
 			  document.querySelector("#target").innerText = json.targetHallTemperature;
@@ -77,3 +85,4 @@
 		</script>
 	</body>
 </html>
+
